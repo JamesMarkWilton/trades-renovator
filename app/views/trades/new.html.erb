@@ -1,0 +1,26 @@
+<% flash.each do |type, msg| %>
+    <div class="flash-message <%= type %>" >
+        <%= msg %>
+    </div>
+<% end %>
+
+<div class="page">
+    <%= image_tag "new.jpg", height: 500, class: "image" %>
+
+    <div class="content">
+        <h1>Procore Trades Renovator</h1>
+
+        <p>
+            Please confirm the customer is aware once added these 124 new trades can only be <a href="https://support.procore.com/products/online/user-guide/company-level/admin/tutorials/delete-a-custom-trade">deleted manually</a> via Procore Admin.
+        </p>
+
+        <p>
+            If they agree we will now attempt to add any trade from our <a href="#">approved list</a> that doesn't match a trade they currently have defined.
+        </p>
+
+        <%= form_with url: "/trades", method: :post do |form| %>
+            <%= form.text_field :company_id, placeholder: "Company ID" %>
+            <%= form.submit "Add Trades", class: "button" %>
+        <% end %>
+    </div>
+</div>

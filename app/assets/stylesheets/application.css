@@ -1,0 +1,76 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @font-face {
+   font-family: 'Inter';
+   src: url('Inter.ttf');
+ }
+
+ body {
+   font-family: "Inter";
+ }
+
+ .page {
+   display: flex;
+    
+ }
+
+ .content {
+   justify-items: center;
+   align-items: center;
+   text-align: center;
+   padding: 100px;
+ }
+
+ .image .content {
+   flex: 1;
+ }
+
+ .image:first-child {
+   margin-right: 20px;
+}
+
+.flash-message {
+   display: flex;
+   box-sizing: border-box;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 10px 10px 24px;
+   margin-bottom: 25px;
+}
+
+.error {
+   background: #FEF7F7;
+   border-left: 8px solid #D92626;
+}
+
+.notice {
+   background: #EDF2FC;
+   border-left: 8px solid #2066DF;
+}
+
+.button {
+   color: #FFFFFF;
+   background: #FF5100;
+   border-radius: 4px;
+   display: inline-block;
+   justify-content: center;
+   align-items: center;
+   padding: 6px;
+   text-decoration: none;
+   border-color: #FF5100;
+}
