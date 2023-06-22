@@ -24,8 +24,7 @@
  }
 
  .page {
-   display: flex;
-    
+   display: flex; 
  }
 
  .content {
@@ -73,4 +72,10 @@
    padding: 6px;
    text-decoration: none;
    border-color: #FF5100;
+}
+
+li {
+  display: inline-block;
+  width: 25%;
+  padding: 5px;
 }

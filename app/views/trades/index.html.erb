@@ -1,0 +1,14 @@
+<div class="page">
+    <div class="content">
+        <h1>Procore Approved Trades</h1>
+    
+        <ul>
+            <% @procore_trades.each do |trade| %>
+                <li><%= trade %></li>
+            <% end %>
+        </ul>
+
+        <%= link_to 'Back to Trades Creation', :back, class: 'button' %> 
+    </div>
+</div>
+

@@ -37,4 +37,8 @@ class TradesController < ApplicationController
     flash.notice = "We have successfully added all possible Procore Approved Trades please check your Customer's Procore Admin Page"
     render new_trade_path
   end
+
+  def index
+    @procore_trades = JSON.parse(File.read("#{Rails.root}/public/trades.json"))
+  end
 end
